@@ -1,0 +1,50 @@
+session_config:
+  session_expiration_time: 0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- what_do_you_have
+- vegetarian
+- non_veg
+- order_name_veg
+- order_name_non_veg
+- mood_great
+- mood_unhappy
+- bot_challenge
+- more_info
+responses:
+  utter_info:
+  - text: here is the Link of our webiste http://innovateyourself.in/
+  utter_botgreet:
+  - text: How can i help you sir?
+  utter_veg_non_veg:
+  - text: 'what would you prefer:'
+    buttons:
+    - title: Vegetarian
+      payload: /vegetarian
+    - title: Non-Vegetarian
+      payload: /non_veg
+  utter_veg:
+  - text: 'Here are the meals for you:'
+    image: https://mirchistoke.co.uk/img/2019-5-2.jpg
+  utter_non_veg:
+  - text: 'Here are the meals for you:'
+    image: https://media-cdn.tripadvisor.com/media/photo-s/12/3e/7c/5f/non-veg-starters-menu.jpg
+  utter_anthingelse:
+  - text: Is there any thing else sir?
+  utter_thanks:
+  - text: Thanks. We will get your order shortly.
+  utter_goodbye:
+  - text: Bye
+actions:
+- utter_goodbye
+- utter_botgreet
+- utter_veg_non_veg
+- utter_veg
+- utter_non_veg
+- utter_anthingelse
+- utter_thanks
+- utter_info
